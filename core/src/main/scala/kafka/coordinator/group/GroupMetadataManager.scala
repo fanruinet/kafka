@@ -670,7 +670,7 @@ class GroupMetadataManager(brokerId: Int,
                 }
               }
             }
-            currOffset = batch.nextOffset
+            currOffset = Math.max(currOffset, batch.nextOffset)
           }
         }
 
